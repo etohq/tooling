@@ -1,0 +1,48 @@
+{
+  "name": "@etohq/eslint-config",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "./base.js",
+    "./index.js",
+    "./react.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path ../../.gitignore",
+    "format:fix": "prettier --write \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "catalog:shared",
+    "@typescript-eslint/eslint-plugin": "catalog:shared",
+    "@typescript-eslint/parser": "catalog:shared",
+    "eslint": "catalog:shared",
+    "eslint-config": "catalog:shared",
+    "eslint-config-next": "catalog:shared",
+    "eslint-config-prettier": "catalog:shared",
+    "eslint-config-turbo": "catalog:shared",
+    "eslint-plugin-import": "catalog:shared",
+    "eslint-plugin-jsx-a11y": "catalog:shared",
+    "eslint-plugin-react": "catalog:shared",
+    "eslint-plugin-react-hooks": "catalog:shared",
+    "eslint-plugin-tailwindcss": "catalog:shared",
+    "typescript": "catalog:shared"
+  },
+  "devDependencies": {
+    "@etohq/prettier-config": "workspace:*",
+    "@etohq/tsconfig": "workspace:*",
+    "@types/eslint": "catalog:shared",
+    "prettier": "catalog:shared"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./base.js"
+    ]
+  },
+  "prettier": "@etohq/prettier-config"
+}

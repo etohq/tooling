@@ -1,0 +1,22 @@
+{
+  "name": "@etohq/prettier-config",
+  "private": true,
+  "version": "0.1.0",
+  "main": "prettier.config.cjs",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path ../../.gitignore",
+    "format:fix": "prettier --write \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "catalog:shared",
+    "prettier": "catalog:shared",
+    "prettier-plugin-tailwindcss": "catalog:shared"
+  },
+  "devDependencies": {
+    "@etohq/tsconfig": "workspace:*",
+    "typescript": "catalog:shared"
+  },
+  "prettier": "@etohq/prettier-config"
+}
