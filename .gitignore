@@ -12,7 +12,7 @@ coverage
 .next/
 out/
 build
-.swc/
+.swc/ 
 
 # misc
 .DS_Store
@@ -41,3 +41,4 @@ certificates/
 # Ignore iOS and Android directories in React Native projects
 /ios/
 /android/
+  
