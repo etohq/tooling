@@ -4,7 +4,7 @@ const config = {
     "prettier-plugin-tailwindcss",
   ],
   tailwindFunctions: ["tva"],
-  tailwindConfig: "../../packages/tailwind-config",
+  tailwindConfig: require.resolve("@etohq/tailwind-config"),
   importOrder: [
     "^(react/(.*)$)|^(react$)|^(react-native(.*)$)",
     "^(next/(.*)$)|^(next$)",

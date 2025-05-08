@@ -17,6 +17,7 @@ const breakPointsAsArray = Object.entries(breakPointsInPx).map(
 )
 
 const breakPointsAsNumber = Object.keys(breakPointsInPx).reduce((acc, key) => {
+  // @ts-ignore
   acc[key] = breakPointsInPx[key].replace('px', '')
   return acc
 }, {})
